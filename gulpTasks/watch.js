@@ -11,9 +11,10 @@ gulp.task('watch', ['browser-sync'], function() {
 });
 
 gulp.task('browser-sync', ['nodemon'], function() {
+  var isWin = /^win/.test(process.platform);
   browserSync.init(null, {
     proxy: 'http://localhost:3000',
-    browser: 'google-chrome',
+    browser: isWin ? 'chrome' : 'google-chrome',
     port: 3001
   });
 });

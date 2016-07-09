@@ -4,9 +4,9 @@
   "description": "",
   "main": "backend/app.js",
   "scripts": {
-    "install": "node_modules/.bin/bower install",
-    "production": "pm2 backend/app.js",
-    "start": "node_modules/.bin/gulp",
+    "install": "./node_modules/.bin/bower install",
+    "production": "./node_modules/.bin/pm2 backend/app.js",
+    "start": "./node_modules/.bin/gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Leonardo Leitão",
@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.9.0",
+    "bower": "^1.7.9",
     "browser-sync": "^2.13.0",
     "fs-extra": "^0.30.0",
     "gulp": "^3.9.1",
