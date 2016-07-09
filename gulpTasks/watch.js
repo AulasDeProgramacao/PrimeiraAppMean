@@ -22,7 +22,7 @@ gulp.task('browser-sync', ['nodemon'], function() {
 gulp.task('nodemon', function(done) {
   var running = false;
   return nodemon({
-    script: 'backend/app.js',
+    script: 'backend/loader.js',
     watch: [
       'backend/**/*.*'
     ]

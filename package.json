@@ -2,10 +2,10 @@
   "name": "primeiraAppMean",
   "version": "1.0.0",
   "description": "",
-  "main": "backend/app.js",
+  "main": "backend/loader.js",
   "scripts": {
     "install": "./node_modules/.bin/bower install",
-    "production": "./node_modules/.bin/pm2 backend/app.js",
+    "production": "./node_modules/.bin/pm2 backend/loader.js",
     "start": "./node_modules/.bin/gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
