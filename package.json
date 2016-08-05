@@ -4,9 +4,9 @@
   "description": "",
   "main": "backend/loader.js",
   "scripts": {
-    "install": "./node_modules/.bin/bower install",
-    "production": "./node_modules/.bin/pm2 backend/loader.js",
-    "start": "./node_modules/.bin/gulp",
+    "install": "bower install",
+    "dev": "gulp",
+    "production": "pm2 backend/loader.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Leonardo Leitão",
