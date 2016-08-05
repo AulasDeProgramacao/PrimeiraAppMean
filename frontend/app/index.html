@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="basicMeanApp">
+<html ng-app="primeiraApp">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,9 @@
   <script src="/assets/js/app.min.js"></script>
   <script type="text/javascript">
    // hack... ;)
-   $('.content-wrapper').css("min-height", $(document).height() - 101);
+   $(function() {
+     $('.content-wrapper').css("min-height", $(document).height() - 101);
+   })
   </script>
 </body>
 </html>
