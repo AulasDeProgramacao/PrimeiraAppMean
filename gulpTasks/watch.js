@@ -1,13 +1,14 @@
 var gulp = require('gulp');
+var watch = require('gulp-watch');
 var nodemon = require('gulp-nodemon');
 var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
 
 gulp.task('watch', ['browser-sync'], function() {
-  gulp.watch('frontend/app/**/*.html', ['app.html', 'reload']);
-  gulp.watch('frontend/app/**/*.css', ['app.css', 'reload']);
-  gulp.watch('frontend/**/*.js', ['app.js', 'reload']);
-  gulp.watch('frontend/assets/**/*.*', ['app.assets', 'reload']);
+  watch('frontend/app/**/*.html', () => gulp.start('app.html', 'reload'));
+  watch('frontend/app/**/*.css', () => gulp.start('app.css', 'reload'));
+  watch('frontend/**/*.js', () => gulp.start('app.js', 'reload'));
+  watch('frontend/assets/**/*.*', () => gulp.start('app.assets', 'reload'));
 });
 
 gulp.task('browser-sync', ['nodemon'], function() {
