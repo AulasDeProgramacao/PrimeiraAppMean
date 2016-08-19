@@ -29,9 +29,6 @@ gulp.task('app.js', function() {
 });
 
 gulp.task('app.assets', function() {
-  gulp.src([
-    'frontend/assets/**/*.*',
-    '!frontend/assets/**/*.css',
-    '!frontend/assets/**/*.js'
-  ]).pipe(gulp.dest('public/assets'));
+  gulp.src('frontend/assets/**/*.*')
+    .pipe(gulp.dest('public/assets'));
 });
